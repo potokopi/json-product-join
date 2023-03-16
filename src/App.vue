@@ -6,9 +6,31 @@
         <h4>* vue/pinia: json join product with category</h4>
       </header>
       <h5>data</h5>
-      <pre>
-        {{ products }}
-      </pre>
+      
+      <div class="container">
+        <div class="float">
+        <div class="border gap-2">
+          <h5>products</h5>
+          <pre>
+            {{ products.products }}
+          </pre>
+        </div>
+        <div class="border gap-2">
+          <h5>categories</h5>
+          <pre>
+            {{ products.categories }}
+          </pre>
+        </div>
+       
+        <div class="border gap-2">
+          <h5>person</h5>
+          <pre>
+            {{ products.persons }}
+          </pre>
+        </div>
+      </div>
+      </div>
+     
       <h5>product & category</h5>
       <div class="result">
         <ul>
@@ -75,21 +97,35 @@ span:hover {
   color: white;
   display: pointer;
 }
-pre, .result {
+
+pre, .result, h5 {
   border: 1px solid #222;
+}
+pre, .result {
+ 
   padding: 5px;
   margin:0;
   margin-bottom: 5px;
 }
 .result {
   border-color: #222;
-  
 }
 h5 {
-  border:1px solid #222;
   padding:10px;
   background-color: #222;
   color:white;
   margin:0;
+}
+.border {
+  
+  padding:5px;
+}
+.float {
+  display: relative;
+  overflow: hidden;
+}
+.border {
+  margin-right: 10px;
+  float:left;
 }
 </style>
