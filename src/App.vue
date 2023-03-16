@@ -5,7 +5,10 @@
       <header>
         <h4>* vue/pinia: json join product with category</h4>
       </header>
-      
+      <h5>data</h5>
+      <pre>
+        {{ products }}
+      </pre>
       <h5>product & category</h5>
       <div class="result">
         <ul>
@@ -48,7 +51,7 @@
       const productCategory = products.getProductsWithCategories(products);
       const productPersonCategory = products.getProductsWithPersonAndCategory(products);
       // const product = products.find(product => product.id === products.id);
-      return {  productCategory, productPersonCategory }
+      return {  products, productCategory, productPersonCategory }
     }
   }
 </script>
